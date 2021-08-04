@@ -1,0 +1,9 @@
+apiVersion: v2
+name: flink-deploy
+description: Helm chart in order to deploy flink application in app mode.
+
+type: application
+
+version: 0.1.0
+
+appVersion: "1.16.0"

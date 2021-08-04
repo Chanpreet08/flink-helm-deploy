@@ -1,0 +1,37 @@
+name: flink-app
+
+namespace: <namespace>
+
+image:
+  repository: <repo>
+  pullPolicy: IfNotPresent
+  tag: "<tag>"
+
+
+resources:
+  jobmanager:
+    limits:
+      cpu: 1000m
+      memory: 1280Mi
+    requests:
+      cpu: 1000m
+      memory: 1280Mi
+  taskmanager:
+    limits:
+      memory: 1280Mi
+    requests:
+      memory: 1280Mi
+
+
+imagePullSecrets:
+  - name: <secret>
+
+jobConfig:
+  env:
+    - name: <name>
+      value: <value>
+
+flinkConfig:
+  parallelismDefault: 2
+  taskmanagerNumberOfTaskSlots: 1
+
